@@ -1,0 +1,18 @@
+[Unit]
+Description=service to start code
+
+[Service]
+User=prod-crawl-server-user
+WorkingDirectory=/home/prod-crawl-server-user/ChildUrlXpath_yes/CrawlingEngine
+ExecStart=/home/prod-crawl-server-user/ChildUrlXpath_yes/CrawlingEngine/restart.sh
+Restart=on-failure
+
+
+
+
+#Environment="PATH=/home/prod-crawl-server-user/anaconda3/envs/reglake/bin:/usr/bin:/bin:$PATH"
+
+
+[Install]
+WantedBy=multi-user.target
+

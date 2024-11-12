@@ -1,0 +1,13 @@
+[Unit]
+Description=service to start code
+
+[Service]
+User=prod-crawl-server-user
+WorkingDirectory=/home/prod-crawl-server-user/ChildUrlXpath_no/CrawlingEngine
+ExecStart=/home/prod-crawl-server-user/ChildUrlXpath_no/CrawlingEngine/restart.sh
+Restart=on-failure
+
+
+
+[Install]
+WantedBy=multi-user.target
